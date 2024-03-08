@@ -19,8 +19,7 @@ public class LectureVideoServiceImpl implements LectureVideoService {
         jmsTemplate.convertAndSend("LectureVideoActivity", nouvelleVitesseLecture);
     }
 
-    @Override
-    public double calculerVitesse(float nombreToursMinute) {
+    private double calculerVitesse(float nombreToursMinute) {
         // Logique de calcul de la nouvelle vitesse à partir de la donnée récupérée du capteur
         return nombreToursMinute * 2.1 * 4;
     }
